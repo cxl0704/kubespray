@@ -54,8 +54,8 @@ kubeadm_version: "{{ kube_version }}"
 etcd_version: v3.3.10
 
 # gcr and kubernetes image repo define
-gcr_image_repo: "gcr.io"
-kube_image_repo: "{{ gcr_image_repo }}/google-containers"
+gcr_image_repo: "registry.cn-beijing.aliyuncs.com"
+kube_image_repo: "{{ gcr_image_repo }}/k8s_google_containers"
 
 # docker image repo define
 docker_image_repo: "docker.io"
@@ -243,7 +243,7 @@ calico_rr_image_repo: "{{ docker_image_repo }}/calico/routereflector"
 calico_rr_image_tag: "{{ calico_rr_version }}"
 calico_typha_image_repo: "{{ docker_image_repo }}/calico/typha"
 calico_typha_image_tag: "{{ calico_typha_version }}"
-pod_infra_image_repo: "{{ gcr_image_repo }}/google_containers/pause-{{ image_arch }}"
+pod_infra_image_repo: "{{ gcr_image_repo }}/k8s_google_containers/pause-{{ image_arch }}"
 pod_infra_image_tag: "{{ pod_infra_version }}"
 install_socat_image_repo: "{{ docker_image_repo }}/xueshanf/install-socat"
 install_socat_image_tag: "latest"
@@ -335,7 +335,7 @@ addon_resizer_version: "1.8.3"
 addon_resizer_image_repo: "{{ kube_image_repo }}/addon-resizer"
 addon_resizer_image_tag: "{{ addon_resizer_version }}"
 
-dashboard_image_repo: "{{ gcr_image_repo }}/google_containers/kubernetes-dashboard-{{ image_arch }}"
+dashboard_image_repo: "{{ gcr_image_repo }}/k8s_google_containers/kubernetes-dashboard-{{ image_arch }}"
 dashboard_image_tag: "v1.10.1"
 
 image_pull_command: "{{ docker_bin_dir }}/docker pull"
